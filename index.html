@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Clash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
+
+        <!-- home-screen -->
+        <section class="flex flex-col justify-center items-center text-white min-h-screen gap-5" id="home-screen">
+            <h1 class="text-8xl font-extrabold">ALPHABET CLASH</h1>
+            <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <button class="btn btn-primary" onclick="play()">Play Now</button>
+        </section>
+
+        <!-- playground -->
+        <section class="hidden" id="playground">
+
+            <div class="flex flex-col items-center justify-center min-h-screen gap-10">
+                <!-- game-screen -->
+                <div
+                    class="artboard artboard-horizontal phone-6 border-solid border-[#010313CC] border-[20px] rounded-[16px] bg-[#FFFFFFB3]">
+                    <div class="bg-[#010313CC] text-white max-w-[300px] mx-auto text-center rounded-b-xl pb-2">
+                        <h1 class="">Don't watch keyboard while playing...</h1>
+                    </div>
+
+                    <div class="flex items-center justify-center h-[200px]">
+                        <p id="screen" class="text-black text-8xl uppercase">Y</p>
+                    </div>
+                </div>
+
+                <!-- Keyboard -->
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
+                    </div>
+                </div>
+                <!-- life-score -->
+                <div class="text-white flex gap-[1000px]">
+                    <button class="btn btn-accent text-white">
+                        <h1 class="text-xl">Life</h1>
+                        <img src="public/images/group-23.svg" alt="">
+                        <span class="life text-xl" id="life">5</span>
+                    </button>
+                    <button class="btn btn-accent text-white text-xl flex justify-center items-center">
+                        <h1>Score</h1>
+                        <img src="public/images/monetization-on.svg" alt="">
+                        <span id="score">0</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--final Score -->
+        <section class="flex items-center justify-center min-h-screen hidden" id="score-screen">
+            <div
+                class="bg-[#ffffff33] max-h-[300px] max-w-[450px] flex flex-col justify-center items-center p-12 gap-4 text-white rounded-xl">
+                <h1 class="text-5xl font-extrabold">Score: <span id="finalScore">1</span></h1>
+                <button class="btn btn-primary bg-white text-black border-none px-10" onclick="playAgain()">Play
+                    Again</button>
+                <p>Practice will make you Pro</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
